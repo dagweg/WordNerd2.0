@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik&display=swap" rel="stylesheet">
+        <!-- CSS only -->        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- JQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/static/scripts.js" ></script>
+        {% block head %}
+        {% endblock %}
+
+        <link href="/static/style.css" rel="stylesheet">
+        <style>
+            .title a
+            {
+                text-decoration: none;
+                font-family: 'Roboto';
+                color: white;
+            }
+            .margin-b-5px
+            {
+                margin-bottom: 5px;
+            }
+            .margin-t-3rem
+            {
+                margin-top: 3rem;
+            }
+            *{
+                color:rgb(69, 69, 69);
+            }
+            
+            
+        </style>
+        <title>Signup</title>
+    </head>
+
+
+    <body class="bg">
+
+        <nav class="nav-bar" >
+            <h1 class="title text-center" style="margin:auto;"><a href="/">Word<span style="color:rgb(255, 208, 0) ;">Nerd</span>&#8482</a></h1>
+        </nav>
+        
+        
+
+        <div style="display:flex; align-items: center; justify-content:center;" >
+            
+            <div class="margin-50-r" style="background: linear-gradient(132deg, rgb(2, 106, 122) 0.00%, rgb(242, 78, 163) 100.00%);margin-top: 0; background-color: #00131d; width: 25vw; height: 100vh;" >
+            </div>
+            
+            
+            <!-- code goes here -->
+            <div class="margin-50-t" style="color:white; display: block; margin-left:auto; margin-right:auto;">
+                
+
+                <h3 style="text-align: center; color:white; font-family: Lobster Two; font-size:xx-large; color:rgb(61, 61, 61); scale:1.4;">Create Account</h3>
+                <hr class="hr" />
+
+
+                <form action="/signup" method="post">
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group">
+                        <span class="margin-b-5px" >Username:</span>
+                        </div>
+                        <input name="username" type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" >
+                        
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group">
+                            <span class="margin-b-5px">Email:</span>
+                        </div>
+                        <input name="email" type="text" class="form-control"aria-label="Email" aria-describedby="basic-addon1" >
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group">
+                            <span class="margin-b-5px">Password:</span>
+                        </div>
+                        <input name="password" type="password" class="form-control" aria-label="Password" aria-describedby="basic-addon1" >
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group">
+                            <span class="margin-b-5px">Confirm Password:</span>
+                        </div>
+                        <input name="cpassword" type="password"  class="form-control" aria-label="Password" aria-describedby="basic-addon1" >
+                    </div>
+
+
+                    <input style="padding: 8px;" class="form-control btn btn-primary margin-t-3rem " type="submit" value="Create Account">
+                    <div>
+                        <label style="font-size:small;" for="createaccount">Already have an account?</label>
+                        <a href="/login" style="text-decoration: none; font-size:small; color:rgb(98, 192, 255);" >Sign-in</a>
+                    </div>
+                    <hr class="hr" />
+                </form>
+
+
+
+            </div>
+                
+
+
+            <div class="margin-50-l"  style="background: linear-gradient(562deg, rgb(2, 106, 122) 0.00%, rgb(242, 78, 163) 100.00%);position:relative; right:0;margin-top: 0; background-color: #00131d; width: 25vw; height: 100vh;" >
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>Homepage</title>
+{% endblock %}
+
+{% block body %}    
+
+    <div class="margin-50-t" style="display: block;width:100%; height:100vh; background-color: white;">
+        
+        <!-- Difficulty Selection -->
+        <div>
+            <div style="display: flex; justify-content:center; margin-top:10px;" class="text-center" >
+                <img style="width: 30px; height:30px; align-items: center;" src="/static/Content/--rank.png">
+                <p class="text-center" style="color: rgb(110, 93, 93) ; font-family:Lobster Two; font-size:large;" id="rank" >Rank:</p>    
+            </div>
+            
+            
+            <hr class="hr" style="color:white;" />
+            <p type="text" id="difficultyInfo" class="text-secondary text-center difficulty" style="font-family:rancho; font-size:x-large;">Difficulty : {{diff}}</p>
+            <p style="color: grey; text-align: center; font-weight:lighter; font-family: lobster two; font-size:xx-large;">{{instruction}}</p>
+            <form method="post" class="centered" id="form">
+                <input type='submit'class="btn btn-secondary button-1" onclick="changeColor('0')" id = "e" name="easy" value="Easy" style="font-family:righteous;">
+                <input type='submit'class="btn btn-secondary button-1" onclick="changeColor('1')" id = "m" name="medium" value="Medium" style="font-family:righteous;">
+                <input type='submit'class="btn btn-secondary button-1" onclick="changeColor('2')" id = "h" name="hard" value="Hard" style="font-family:righteous;">
+                <input type='submit'class="btn btn-secondary button-1" onclick="changeColor('3')" id = "i" name="insane" value="Insane" style="font-family:righteous;">
+            </form>
+            <hr class="hr" style="color:white; margin-top: 2rem;" />
+        </div>
+
+        <!-- Score Total and Progress -->
+        <div id="scoreDiv" class="text-center">
+            <p id="scoreLabel"  style="font-family: Silkscreen; scale: 1 1.3; color:gray;">{{score}}</p>
+            <div style="background-color:white;width:25vw; margin-left:auto; margin-right:auto;"> 
+                <div id="progress"></div>
+            </div>
+            <p id="progresspercent"></p>
+        </div>
+    
+        <!-- Out of bulb notifier -->
+        <div id="outofbulb" hidden class="alert alert-success" role="alert" style="margin:auto; padding-left:6rem; text-align:center; padding-right:6rem;">
+            <span style="font-family:'Rubik';">You ran out of bulb tokens. &#9785</span> 
+        </div>
+
+        <!-- Score Notify -->
+        <div hidden id="scorenotifier" style="display: flex; justify-content:center; margin-bottom:0;">
+            <label id="scorenotifierlabel" style="text-align: center; color:black; font-family:'Silkscreen'; font-size:xx-large;">+5</label>
+        </div>
+
+        <!-- Letters -->
+        <div id="letter-img-div" class="container margin-50-b margin-50-t">
+            {% for letter in scrambled %}
+                <h1 id="iletters" class="lettercard draggable letters letter-img-child" draggable="true" ondragend="validateLetterCombo('{{word}}')" name='{{letter}}' value="{{letter}}" style="font-family: righteous;">{{letter.upper()}}</h1>
+            {% endfor %} 
+        </div> 
+
+        <!-- Compliments -->
+        <div class="compliment" id="icompliment" style="color:green" hidden >
+            <h1>{{compliment}}</h1>
+        </div>
+
+        <!-- HINT -->
+        <form class="centered">
+            <input type="button" id="getHintBtn" onclick="hintClick('{{hint}}')" class="btn btn-primary button-def" value="Get Hint" style="font-family:Righteous; font-weight: medium;"/> 
+            <img class="btn btn-primary" onclick="bulbWork('{{word}}')" id='ibulb' src="/static/Content/--bulb3.png" alt="bulb">
+            <div id="hintTextDiv" class="">
+                <p id="hintTextArea" style="font-family:Roboto; font-size:medium;"></p>
+            </div>
+        </form> 
+    </div>
+
+    
+        
+{% endblock %}

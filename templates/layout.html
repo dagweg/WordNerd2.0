@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+        <!-- CSS only -->        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- JQuery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/static/scripts.js" ></script>
+        {% block head %}
+        {% endblock %}
+        <link href="/static/style.css" rel="stylesheet">
+        <style>
+            .title a
+            {
+                text-decoration: none;
+                color: white;
+            }
+            
+        </style>
+    </head>
+
+
+    <body class="bg"  onload="onLoad('{{word}}', '{{firstLoad}}', '{{diff}}')">
+
+        <nav class="nav-bar" >
+            <h1 class="title text-center"><a href="/">Word<span style="color:rgb(255, 208, 0) ;">Nerd</span>&#8482</a></h1>
+            {% block scoreboard %}
+            {% endblock %}
+            <ul>
+                <li><a href = '/home'>Play</a></li>                
+                <li><a href = '/accounts'>Account</a></li>
+                <li><a href = '/about'>About</a></li>
+                <li><button class="button button-div"  id="help-btn" onclick="welcomeClicked()" style="width: 6rem; height:2rem; border-radius:4px !important; border:none; scale:0.8; background-color:transparent; color:white; cursor: help;">Help?</button></li>
+            </ul>
+        
+        </nav>
+
+        <div  hidden class="overlay" ></div>
+            <div hidden class="popup-div popup-gradient">
+                <div>
+                    <h1 style="font-family: Righteous;color:rgb(255, 255, 255);">Welcome to Word<span style="color:  rgb(255, 208, 0);">Nerd</span></h1>
+                    <h3 style="font-weight:normal; color:rgb(255, 255, 255); scale:0.9; font-family:Rancho;">
+                        Embark on an exhilarating word adventure in our captivating online game! Journey from humble beginnings to the coveted title of "Magniloquent."
+                        Unleash your word mastery as you unravel a tapestry of scrambled letters, earning score points with each triumph. Challenge yourself by conquering increasingly difficult puzzles, unlocking the true depth of your linguistic prowess. With every brain-teasing word you decipher and every clever solution you uncover, your score soars to new heights!
+                        Immerse yourself in a world where intelligence reigns supreme and the pursuit of lexical excellence knows no bounds. Unleash your inner wordsmith, relying less on assistance and conquering even the most arduous word conundrums. The greater your linguistic acumen, the more splendid your score shall become.
+                        Are you ready for this remarkable wordplay endeavor? Bestow upon yourself the gift of language mastery and embark on a thrilling journey toward becoming the magnificent "Magniloquent." Good luck, adventurer!
+                    </h3>
+                    <div  class="button">
+                        <div id="iembark" onclick="embarkClicked()" class="button-div" ><p style="font-family:Rancho; scale:2; ">Embark!</p></div>
+                    </div>
+                </div> 
+            </div>
+
+        <div style="display: flex;">
+            
+            {% block body %}
+            {% endblock %}
+          
+        </div>
+        
+    </body>
+</html>

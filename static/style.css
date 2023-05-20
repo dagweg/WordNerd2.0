@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap');       
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Righteous&display=swap');
+
+
+.title
+{
+    color: rgb(255, 174, 0) ;
+    font-family: Roboto;
+    font-weight: 900;
+}
+.bg
+{
+    background-color:#ffffff ;
+}
+.nav-bar
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 5rem;
+    background: linear-gradient(132deg, rgb(41, 169, 188),rgb(255, 87, 247)); /* rgb(242, 78, 163) 100.00%*/
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: transparent;
+}
+.nav-bar h1 
+{
+    margin-top: 1rem;
+}
+.nav-bar ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    /* padding-top: 3.7rem; */
+    
+}
+.nav-bar ul li a
+{
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+    
+}
+.nav-bar ul li a:hover
+{   
+    color: rgb(255, 217, 0);
+}
+.margin-50-b
+{
+    margin-bottom:50px;
+}
+.margin-50-t
+{
+    margin-top:50px;
+}
+.margin-50-l
+{
+    margin-left:50px;
+}
+.margin-50-r
+{
+    margin-right:50px;
+}
+.margin-100
+{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+p 
+{
+    font-family: Roboto;
+    font-weight: 600;
+}
+#letter-img-div
+{
+    display: flex;
+    justify-content:center;
+    text-align:center;
+}
+#difficulty
+{
+    list-style:none;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:4px;
+    margin-right:4px;
+}
+#hintTextDiv
+{
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+}
+#hintTextArea
+{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+.text-area-1
+{
+    width: 400px;
+    background-color: white;
+    padding: 20px;            
+    font-family: 'Roboto';
+    margin: 0 auto;
+    overflow: hidden;
+    transition: .3s linear;
+
+}
+.button-def /* Default Button */
+{
+    color: white;
+    padding:10px;
+    margin: 5px auto;
+    width: 150px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+    text-align: text-center ;
+}
+.button-1 /*For difficulty button!*/
+{
+    padding:10px;
+    margin: 5px auto;
+    width: 150px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+    text-align: text-center ;
+}
+.button-1-selected
+{
+    background-color: rgb(28, 185, 107) !important;
+}
+.centered
+{
+    text-align: center;
+}
+.draggable
+{
+    cursor: move;
+}
+.draggable.dragging
+{
+    scale: 1.5;
+    opacity: .5;
+}
+#check-mark
+{
+    margin-left: 4px;
+    animation: checkmark .5s ease-in-out;
+}
+@keyframes checkmark {
+    0%
+    {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        opacity: .2;
+        transform: rotate(180deg);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    
+}
+.white-text
+{
+    color:white;
+}
+#diff-selector
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #003852;
+    border-radius: 10px;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+    width: 35rem;
+    
+}
+#diff-selector div
+{
+    margin-left: 2rem;
+    margin-left: 2rem;
+}
+.compliment
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: rgb(75, 233, 75);
+    font-family: "Permanent Marker";
+    animation: complimentAnim2 .5s ease-in-out;
+}            
+
+@keyframes complimentAnim1
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(0deg);
+    }
+    50%
+    {
+        opacity: .2;
+        transform: rotateY(180deg);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+@keyframes complimentAnim2
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateX(0deg);
+    }
+    50%
+    {
+        opacity: .2;
+        transform: rotateX(180deg);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+.letter-img-child
+{
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lettercard
+{
+    transition: 0.2s ease-in-out;
+    scale: 1;
+    font-family: 'Roboto';
+    font-weight: 900;
+    color: #ffffff;
+    margin-left: 5px;
+    background-color: #0c5b80 ;
+    border-radius: 4px;
+    box-shadow: 0px 4px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 2px 0 rgba(0, 0, 0, 0.19);
+} 
+
+#ibulb
+{
+    width: 60px;
+    height: 46px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#outofbulb
+{
+    animation: success .1s ease-out;
+}
+@keyframes success {
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: .2;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#scoreLabel
+{
+    color: white;
+    font-size: xx-large;
+    font-family: 'Rubik';
+}
+
+#scorenotifier
+{
+    opacity: 0;
+    animation: scorenotif 2s ease-out;
+}
+
+@keyframes scorenotif {
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+        
+    }
+    90%
+    {
+        opacity: 0.9;
+        
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}
+
+#progress
+{
+    transition: .3s linear;
+    background-color: green;
+    width: 0%;
+    height: .5rem;
+}
+
+
+.popup-div
+{
+    transition: .1s ease-in-out;
+    position: fixed;
+    color:white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 38rem;
+    z-index: 10;
+    border-radius: 10px;
+
+    background: linear-gradient(132deg,#478895,#cf70db);
+    transform-origin: center center;
+    background-repeat: no-repeat;
+    animation: gradient 5s linear infinite;
+    
+
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; /* Start position of the gradient */
+      }
+      100% {
+        background-position: 100% 50%; /* End position of the gradient */
+      }
+}
+
+.popup-div div
+{
+    text-align: center;
+}
+.popup-div div h1
+{
+    margin-top: 2rem;
+}
+.popup-div div h3
+{
+    padding: 0rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.overlay
+{
+    
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    opacity: .65;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+}
+.button-div
+{
+    cursor: pointer;
+    transition: .3s ease-in-out;    
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10px;
+    display: table;
+    
+}
+.button-div:hover
+{
+    transition: .3s ease-in-out;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10px;
+}
+
+#iembark{
+    background: linear-gradient(312deg,#ffffff,#c4c4c4);
+}
+#iembark p
+{
+    color: #ff67fc;
+    transition: .1s ease-in-out;
+    border-radius: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#iembark p:hover
+{
+    color: rgb(0, 0, 0);
+    
+    border-radius: 30px;
+    transition: .3s ease-in-out;
+    display: table-cell;
+    vertical-align: middle;
+    animation: embarkAnimation 3s ease-in-out infinite;
+}
+@keyframes embarkAnimation {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.2);  
+    }100%{
+        transform: scale(1);
+    }
+}

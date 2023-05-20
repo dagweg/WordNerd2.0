@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>Accounts</title>
+    <style>
+        *{
+            color: grey;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <div class="margin-50-t" style=" color:white;display: block; margin-left:auto; margin-right:auto; padding:1rem; border-radius:5px;">
+        <h1 class="text-center" style="font-family:'Lobster Two'; font-weight:bold; color:rgb(78, 78, 78);">Manage Account</h1>
+        <hr class="hr"/>
+        <div style="margin-top:3rem; text-align:center;">
+            <img style="width:200px; height:200px;" src="/static/Content/--user.png">
+        </div>
+        <h6  style="font-family: 'Arial'; font-size:large; font-weight:lighter; text-align:center;font-family:Lobster Two; font-size:large;">{{email}}</h6>
+        
+        <div style="display:flex; align-items:center; justify-content:center; margin-top: 3rem;">
+            <form action="/logout" method="get">
+                <input style="padding: 8px; width:10vw; margin-right:1rem; font-family:Righteous;" class="form-control btn btn-primary margin-t-3rem " type="submit" value="Logout">
+            </form>
+            <form action="/raze" method="get">
+                <input style="padding: 8px; width:10vw; font-family:Righteous;" class="form-control btn btn-danger margin-t-3rem " type="submit" value="Raze Account">
+            </form>
+        </div>
+        
+        
+    </div>  
+        
+{% endblock %}

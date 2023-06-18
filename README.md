@@ -1,4 +1,4 @@
-# WordNerd
+# WordNerd v1.01
 
 #### Video Demo:  https://www.youtube.com/watch?v=SbR5N6D8Vu4&t=2s
 

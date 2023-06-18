@@ -2,6 +2,9 @@
 
 #### Video Demo:  https://www.youtube.com/watch?v=SbR5N6D8Vu4&t=2s
 
+![Create Account](https://github.com/dagweg/WordNerd-v.1.01-WhiteUI/assets/90281138/473106dc-b734-4097-aa23-b847a068b81a)
+
+
 #### Description:
 I've made a web-app called WordNerd where people can play by unscrambling words. Players can choose from 4 ranges of difficulties: Easy, Medium, Hard, and Insane. Each step up in difficulty brings more challenge by increasing word length, consequently the score point you get increases in proportion of the level of difficulty.
 

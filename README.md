@@ -19,7 +19,7 @@ These are:
     1. Hint Button: players can see the actual definition of the word being asked.
     2. Bulb: players can click this button to get instant answers one word at a time, but don't worry its only limited to the (wordLength)/2. i.e: the max answers players can get is half of the word’s letters.
 
-![gif](https://github.com/dagweg/WordNerd-v.1.01-WhiteUI/assets/90281138/70c01c93-135f-4516-9aa8-484370114876)
+![Playing](https://github.com/dagweg/WordNerd-v.1.01-WhiteUI/assets/90281138/5c0ed210-1788-46ed-baf7-4cc51bd758ed)
 
 The website utilizes a single dictionary ‘.csv’ file; from where the algorithm randomly chooses, scrambles and displays it to the webpage. I've also implemented a ranking system where players can progress starting from Barbarian (I know it’s a little harsh word to use but I had to put it in to make it feel like a ‘game’) all the way to becoming a professor. The website has a basic account management system where users can either logout or delete their account. For now, no user can start playing without registering for an account, so be sure to sign up when your met with the login page.
 

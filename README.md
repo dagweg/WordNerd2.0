@@ -1,7 +1,5 @@
 # WordNerd v1.01
 
-#### Video Demo:  https://www.youtube.com/watch?v=SbR5N6D8Vu4&t=2s
-
 ![Create Account](https://github.com/dagweg/WordNerd-v.1.01-WhiteUI/assets/90281138/473106dc-b734-4097-aa23-b847a068b81a)
 
 ![Login](https://github.com/dagweg/WordNerd-v.1.01-WhiteUI/assets/90281138/e8531c0e-cdfb-41f6-860b-42fac5684fb3)
